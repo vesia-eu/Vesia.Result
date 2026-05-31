@@ -3,6 +3,6 @@
     <File Path="LICENSE" />
     <File Path="README.md" />
   </Folder>
-  <Project Path="src/Vesia.Result.Tests/Vesia.Result.Tests.csproj" />
   <Project Path="src/Vesia.Result/Vesia.Result.csproj" />
+  <Project Path="tests/Vesia.Result.Tests/Vesia.Result.Tests.csproj" />
 </Solution>
