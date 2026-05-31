@@ -19,7 +19,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Vesia.Result\Vesia.Result.csproj" />
+      <ProjectReference Include="..\..\src\Vesia.Result\Vesia.Result.csproj" />
     </ItemGroup>
 
 </Project>
