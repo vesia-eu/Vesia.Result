@@ -22,8 +22,4 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <Product>Vesia.Result</Product>
     </PropertyGroup>
-
-    <ItemGroup>
-        <None Include="README.md" Pack="true" PackagePath="\" />
-    </ItemGroup>
 </Project>

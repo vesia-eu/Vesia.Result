@@ -1,4 +1,4 @@
 <Solution>
-  <Project Path="Vesia.Result.Tests/Vesia.Result.Tests.csproj" />
-  <Project Path="Vesia.Result/Vesia.Result.csproj" />
+  <Project Path="src/Vesia.Result.Tests/Vesia.Result.Tests.csproj" />
+  <Project Path="src/Vesia.Result/Vesia.Result.csproj" />
 </Solution>
