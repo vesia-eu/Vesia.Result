@@ -4,6 +4,26 @@
         <TargetFramework>net10.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <AssemblyName>Vesia.Result</AssemblyName>
+        <RootNamespace>Vesia.Result</RootNamespace>
+
+        <!-- NuGet metadata -->
+        <PackageId>Vesia.Result</PackageId>
+        <Product>Vesia.Result</Product>
+        <Version>0.1.1</Version>
+        <Title>Vesia.Result</Title>
+        <Authors>Vesia</Authors>
+        <RepositoryUrl>https://github.com/vesia-eu/Vesia.Result</RepositoryUrl>
+        <PackageTags>result;functional;error-handling;csharp;dotnet;monadic;railway-oriented-programming</PackageTags>
+        <Description>A lightweight, dependency-free Result type for .NET with support for Match, Map, and Bind. Model success and failure explicitly without exceptions.</Description>
+        <PackageProjectUrl>https://github.com/vesia-eu/Vesia.Result</PackageProjectUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Product>Vesia.Result</Product>
     </PropertyGroup>
 
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
 </Project>
