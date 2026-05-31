@@ -10,7 +10,7 @@
         <!-- NuGet metadata -->
         <PackageId>Vesia.Result</PackageId>
         <Product>Vesia.Result</Product>
-        <Version>0.1.0</Version>
+        <Version>0.1.1</Version>
         <Title>Vesia.Result</Title>
         <Authors>Vesia</Authors>
         <RepositoryUrl>https://github.com/vesia-eu/Vesia.Result</RepositoryUrl>
@@ -19,6 +19,7 @@
         <PackageProjectUrl>https://github.com/vesia-eu/Vesia.Result</PackageProjectUrl>
         <RepositoryType>git</RepositoryType>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <Product>Vesia.Result</Product>
     </PropertyGroup>
 
