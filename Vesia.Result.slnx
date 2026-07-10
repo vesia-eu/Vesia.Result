@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/ProjectData/">
+    <File Path=".github\workflows\publish.yml" />
     <File Path="LICENSE" />
     <File Path="README.md" />
   </Folder>

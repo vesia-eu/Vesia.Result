@@ -92,6 +92,7 @@ public class GenericResultTests
         var mapped = result.Map(res => 1);
         
         Assert.False(mapped.IsSuccess);
+        Assert.True(mapped.IsFailure);
         Assert.Equal(error, mapped.Error);
     }
     
@@ -105,6 +106,7 @@ public class GenericResultTests
         
         Assert.Equal(0, bindTest.Value);
         Assert.True(bindTest.IsSuccess);
+        Assert.False(bindTest.IsFailure);
     }
     
     // Test 11 - Failed Bind Test
@@ -118,6 +120,7 @@ public class GenericResultTests
         
         Assert.Equal(error, bindTest.Error);
         Assert.False(bindTest.IsSuccess);
+        Assert.True(bindTest.IsFailure);
     }
     
     // Test 12 - Short_Circuit Bind test
@@ -131,6 +134,7 @@ public class GenericResultTests
         
         Assert.Equal(error, bindTest.Error);
         Assert.False(bindTest.IsSuccess);
+        Assert.True(bindTest.IsFailure);
     }
     
     // Test 13 - Failed - default Value
@@ -141,5 +145,54 @@ public class GenericResultTests
         
         Assert.Null(result.Value);
         Assert.False(result.IsSuccess);
+        Assert.True(result.IsFailure);
+    }
+    
+    // Test 14 - Failed - Error Factory
+    [Fact]
+    public void Error_Factory()
+    {
+        var result = Result<string>.Failure(ErrorType.Unavailable ,"Error");
+        
+        Assert.Null(result.Value);
+        Assert.False(result.IsSuccess);
+        Assert.True(result.IsFailure);
+    }
+    
+    // Test 15 - Success - Tap executes action and passes through unchanged
+    [Fact]
+    public void Tap_Test()
+    {
+        var tapValue = "";
+        var resultString = Result<string>.Success("Correct!");
+    
+        resultString.Tap(p => tapValue = p);
+    
+        Assert.Equal("Correct!", tapValue);
+        Assert.True(resultString.IsSuccess);
+        Assert.False(resultString.IsFailure);
+    }
+    
+    [Fact]
+    public void Tap_OnSuccess_ExecutesActionAndReturnsOriginalResult()
+    {
+        var tapValue = "";
+        var result = Result<string>.Success("Correct!");
+    
+        var returned = result.Tap(v => tapValue = v);
+    
+        Assert.Equal("Correct!", tapValue);
+        Assert.Same(result, returned);
+    }
+
+    [Fact]
+    public void Tap_OnFailure_DoesNotExecuteAction()
+    {
+        var tapValue = "";
+        var result = Result<string>.Failure(ErrorType.NotFound, "Not found");
+    
+        result.Tap(v => tapValue = v);
+    
+        Assert.Empty(tapValue);
     }
 }
