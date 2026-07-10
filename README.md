@@ -32,7 +32,7 @@ Error.Unauthorized("Sign in required");
 Error.Forbidden("You don't have access to this resource");
 Error.Internal("Something went wrong");
 Error.Unavailable("Service is temporarily unavailable");
-```~~~~
+```
 
 ### Error Types
 
