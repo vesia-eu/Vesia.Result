@@ -17,6 +17,8 @@ public class Result
     
     public static Result Failure(ErrorType type, string message) 
         => Failure(new Error(type, message));
+    public static Result Failure(string message)
+        => Failure(new Error(ErrorType.Unspecified, message));
 
     public TOut Match<TOut>(
         Func<TOut> onSuccess,
@@ -57,6 +59,9 @@ public class Result<T>
     
     public static Result<T> Failure(ErrorType type, string message) 
         => Failure(new Error(type, message));
+    public static Result<T> Failure(string message)
+        => Failure(new Error(ErrorType.Unspecified, message));
+    
 
     public TOut Match<TOut>(
         Func<T, TOut> onSuccess,
