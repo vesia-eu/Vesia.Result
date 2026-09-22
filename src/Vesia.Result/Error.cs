@@ -12,6 +12,7 @@ public record Error
     public static Error Unauthorized(string message) => new(ErrorType.Unauthorized, message);
     public static Error Forbidden(string message) => new(ErrorType.Forbidden, message);
     public static Error Internal(string message) => new(ErrorType.Internal, message);
+    public static Error Unspecified(string message) => new(ErrorType.Unspecified, message);
 
     public Error(ErrorType type, string message)
     {
