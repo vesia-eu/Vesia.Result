@@ -10,7 +10,7 @@
         <!-- NuGet metadata -->
         <PackageId>Vesia.Result</PackageId>
         <Product>Vesia.Result</Product>
-        <Version>0.2.1</Version>
+        <Version>0.2.5</Version>
         <Title>Vesia.Result</Title>
         <Authors>Vesia</Authors>
         <RepositoryUrl>https://github.com/vesia-eu/Vesia.Result</RepositoryUrl>
