@@ -2,8 +2,8 @@ namespace Vesia.Result;
 
 public record Error
 {
-    private ErrorType Type { get; }
-    private string Message { get; }
+    public ErrorType Type { get; }
+    public string Message { get; }
     
     public static Error NotFound(string message) => new(ErrorType.NotFound, message);
     public static Error Validation(string message) => new(ErrorType.Validation, message);
